@@ -18,7 +18,6 @@ from pandas.api.types import (
 st.set_page_config(page_title='Restaurantes Rio de Janeiro',
                    layout='centered', initial_sidebar_state='auto')
 
-# path = 'C:\\Users\\gabir\\Documents\\Python-Projects\\Restaurantes-Rio\\Rests-Rio.xlsx'
 
 RestaurantsDB = pd.read_excel('Rests-Rio.xlsx', sheet_name='DB')
 
@@ -265,4 +264,6 @@ if choice == 'Mapa':
     fig.update_layout(mapbox_style="open-street-map")
     # fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
 
-    st.plotly_chart(fig)
+    left, right = st.columns((20,1))
+    with left:
+        st.plotly_chart(fig)
