@@ -27,7 +27,7 @@ abas = ['Geral', 'Preferidos', 'Novos', 'Aleatório', 'Mapa']
 
 choice = st.sidebar.selectbox('Como será a sua escolha hoje?', abas)
 
-st.title('Restaurates Cariocas da Gabi')
+st.title('Restaurantes Cariocas da Gabi')
 
 if choice == 'Geral':
 
